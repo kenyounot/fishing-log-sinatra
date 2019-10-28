@@ -1,3 +1,36 @@
+Home screen shows login page
+Option for public logs at header
+
+Also has button to redirect to create account
+User
+    has name
+    has unique email
+    has password
+    has_many logs
+    can login
+    can logout
+    
+
+Log
+    Date and Time
+    Location
+    Wind Direction
+    Wind Speed
+    Moon Phase
+    Tide Phase
+    Catch Name
+    Catch Length
+    Trip Comments
+    Public or Private
+
+After log in redirects to /logs page
+    shows users log
+
+Asks if you want to create new log
+    
+
+
+
 
 
 
