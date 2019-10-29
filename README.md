@@ -22,12 +22,14 @@ Log
     Catch Length
     Trip Comments
     Public or Private
+    can edit
+    can update
 
 After log in redirects to /logs page
     shows users log
 
 Asks if you want to create new log
-    
+
 
 
 
