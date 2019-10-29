@@ -1,0 +1,5 @@
+<h1>Here are your logs!</h1>
+
+<% @logs.each do |log| %>
+    <h3><a href="/logs/<%= log.id %>"><%= "Date: " + log.date + " " + "Location: " + log.location  %></a></h3>
+<% end %>
