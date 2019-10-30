@@ -1,0 +1,80 @@
+<h1>Create New Log Entry</h1><br>
+
+<form method="post" action="/logs">
+    <label for="date">Date: </label>
+    <input type="text" id="date" name="date"><br>
+    <label for="time">Time: </label>
+    <input type="text" id="time" name="time"><br>
+    <label for="location">Location: </label>
+    <input type="text" id="location" name="location"><br>
+    
+    <label for="wind_direction">Wind Direction: </label>
+    <select name="wind_direction" id="wind_direction">
+        <option value="North West">North West</option>
+        <option value="North">North</option>
+        <option value="North East">North East</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+        <option value="South">South</option>
+        <option value="South East">South East</option>
+        <option value="South West">South West</option>
+    </select><br>
+
+    <label for="wind_speed">Wind Speed: </label>
+    <input type="text" id="wind_speed" name="wind_speed"><br>
+
+    <label for="moon_phase">Moon Phase: </label>
+    <select name="moon_phase" id="moon_phase">
+        <option value="New Moon">New Moon</option>
+        <option value="Waxing Crescent">Waxing Crescent</option>
+        <option value="First Quarter">First Quarter</option>
+        <option value="Waxing Gibbous">Waxing Gibbous</option>
+        <option value="Full Moon">Full Moon</option>
+        <option value="Waning Gibbous">Waning Gibbous</option>
+        <option value="Third Quarter">Third Quarter</option>
+        <option value="Waning Crescent">Waning Crescent</option>
+    </select><br>
+
+    <label for="tide_phase">Tide Phase: </label>
+    <select name="tide_phase" id="tide_phase">
+        <option value="Incoming">Incoming</option>
+        <option value="Outgoing">Outgoing</option>
+        <option value="Slack">Slack</option>
+    </select><br>
+
+    <label for="catch_species">Catch Species: </label>
+    <select name="catch_species" id="catch_species">
+        <option value="Striped Bass">Striped Bass</option>
+        <option value="Blackfish">Blackfish</option>
+        <option value="Blue Fish">Blue Fish</option>
+        <option value="Fluke">Fluke</option>
+        <option value="Weakfish">Weak Fish</option>
+    </select><br>
+
+    <label for="quantity">Catch Quantity: </label>
+    <input type="text" id="quantity" name="quantity"><br>
+
+    <label for="catch_length">Catch Length: </label>
+    <input type="text" id="catch_length" name="catch_length"><br>
+
+    <label for="catch_weight">Catch Weight: </label>
+    <input type="text" id="catch_weight" name="catch_weight"><br><br>
+
+    <label for="comment">Trip Comments: </label><br>
+    <textarea type="text" id="comment" rows="10" cols="50" id="comment" name="comment"></textarea><br><br>
+
+    <input type="Submit" value="Create Log!">
+</form>
+
+  <!--date: "10/12/19",
+  time: nil,
+  location: "Asbury",
+  wind_direction: "NW",
+  wind_speed: nil,
+  moon_phase: nil,
+  tide_phase: nil,
+  catch_species: nil,
+  quantity 
+  catch_length: nil,
+  catch_weight: nil,
+  comment: nil,-->
