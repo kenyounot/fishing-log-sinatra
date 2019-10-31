@@ -27,8 +27,26 @@ class LogsController < ApplicationController
         end
     end
 
+    get '/logs/:id/edit' do
+        @users = User.all
+        @log = Log.find_by_id(params[:id])
+        if @log.user.id == current_user.id
+            erb :'/logs/edit'
+        else
+            redirect "/logs"
+        end
+    end
+
     post '/logs' do
-        binding.pry
+
+        params[:user_id] = session[:user_id]
+        log = Log.new(params)
+
+        if log.save
+            redirect '/logs'
+        else
+            redirect '/logs/new'
+        end
     end
    
 end
