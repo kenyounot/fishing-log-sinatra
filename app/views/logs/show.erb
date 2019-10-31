@@ -9,3 +9,10 @@
 <h3>Catch Length: <%= @log.catch_length %>"</h3>
 <h3>Catch Weight: <%= @log.catch_weight %>lbs</h3>
 <h3>Comment: <%= @log.comment %></h3>
+
+<button type="button" id="edit_btn">Edit</button>
+
+<form method="POST" action="/logs/<%= @log.id %>">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <button type="submit">Delete Log</button>
+</form>

@@ -28,12 +28,21 @@ class LogsController < ApplicationController
     end
 
     get '/logs/:id/edit' do
-        @users = User.all
         @log = Log.find_by_id(params[:id])
         if @log.user.id == current_user.id
-            erb :'/logs/edit'
+            erb :"/logs/edit"
         else
             redirect "/logs"
+        end
+    end
+
+    patch '/logs/:id' do
+        @log = Log.find_by_id(params[:id])
+        params.delete("_method")
+        if @log.update(params)
+            redirect "/logs/#{@log.id}"
+        else
+            redirect "/logs/#{@log.id}/edit"
         end
     end
 
@@ -46,6 +55,17 @@ class LogsController < ApplicationController
             redirect '/logs'
         else
             redirect '/logs/new'
+        end
+    end
+
+    delete '/logs/:id' do
+        @log = Log.find_by_id(params[:id])
+        if @log.user.id == current_user.id
+            @log.delete
+            redirect '/logs'
+
+        else
+            redirect '/logs'
         end
     end
    
