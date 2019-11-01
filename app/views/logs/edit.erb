@@ -1,6 +1,7 @@
-<h1>Edit Log Entry</h1><br>
+<div class="text-center">
+<h1 class="log-text">Edit Log Entry</h1><br>
 
-<form method="post" action="/posts/<%= @log.id %>">
+<form method="post" action="/logs/<%= @log.id %>">
     <input type="hidden" id="hidden" name="_method" value="PATCH" >
 
     <label for="date">Date: </label>
@@ -65,5 +66,7 @@
     <label for="comment">Trip Comments: </label><br>
     <textarea type="text" id="comment" rows="10" cols="50" id="comment" name="comment"><%= @log.comment %></textarea><br><br>
 
-    <input type="Submit" value="Create Log!">
+    <button type="submit" class="btn btn-secondary btn-md">Create Log</button>
 </form>
+
+</div>

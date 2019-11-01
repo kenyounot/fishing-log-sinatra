@@ -1,7 +1,12 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background-color: #F0F3BD;
+  font-family: 'Jomolhari', serif;
+}
+.navbar {
+  background-color: #BBBC9A !important;
+  margin-bottom: 20px;
 }
 
 .jumbotron {
@@ -17,6 +22,11 @@ body {
 .jumbo-text {
   margin-top: 150px;
   color: white;
+}
+
+.log-text {
+  font-size: 4em;
+  margin-bottom: 50px;
 }
 
 .create-btn {

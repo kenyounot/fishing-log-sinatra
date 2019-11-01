@@ -1,7 +1,7 @@
     <div class="log-group">
-        <h1 class="text-center">Here are your logs</h1>
+        <h1 class="text-center log-text">Here are your logs</h1>
         <div class="col-md-12 text-center">
-            <button class="create-btn btn btn-primary btn-medium">Create New Log Entry</button>
+            <button class="create-btn btn btn-secondary btn-medium" onclick="location.href='/logs/new'">Create New Log Entry</button>
         </div>
         <div class="log-loop">
             <% @logs.each do |log| %>
