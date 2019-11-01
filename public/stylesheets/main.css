@@ -4,6 +4,11 @@ body {
   background-color: #F0F3BD;
   font-family: 'Jomolhari', serif;
 }
+
+h4 {
+  font-style: italic;
+  font-size: 1em;
+}
 .navbar {
   background-color: #BBBC9A !important;
   margin-bottom: 20px;
@@ -11,7 +16,7 @@ body {
 
 .jumbotron {
   opacity: 0.8;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/bg.jpg) no-repeat center center;
+  background:url(../images/bg.jpg) no-repeat center center;
   height: 50vh; 
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -27,6 +32,10 @@ body {
 .log-text {
   font-size: 4em;
   margin-bottom: 50px;
+}
+
+.login-text {
+  font-size: 3em;
 }
 
 .create-btn {
