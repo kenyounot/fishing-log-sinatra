@@ -63,7 +63,6 @@ class LogsController < ApplicationController
         if @log.user.id == current_user.id
             @log.delete
             redirect '/logs'
-
         else
             redirect '/logs'
         end

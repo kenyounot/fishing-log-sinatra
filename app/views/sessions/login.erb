@@ -1,10 +1,15 @@
-<h1>Welcome to Fishing Logs</h1>
-<h2>Login or <a href="/users/signup">Create New Account</a></h2>
+<div class="container">
 
-<form method="post" action="/login">
-    <label for="email">Email: </label>
-    <input type="text" id="email" name="email"><br>
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password"><br>
-    <button type="submit">Login</button>
-</form>
+    <h1 align="center">Welcome to Fishing Logs!</h1>
+    
+      <form method="Post" action="/login" class="form-signin">
+        <h2 class="form-signin-heading" align="center">Please Sign In</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="location.href='/users/signup'">Create Account</button>
+      </form>
+
+</div> 

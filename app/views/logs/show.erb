@@ -10,7 +10,7 @@
 <h3>Catch Weight: <%= @log.catch_weight %>lbs</h3>
 <h3>Comment: <%= @log.comment %></h3>
 
-<button type="button" id="edit_btn">Edit</button>
+<button type="button" onclick="location.href = '/logs/<%= @log.id %>/edit';">Edit</button>
 
 <form method="POST" action="/logs/<%= @log.id %>">
     <input type="hidden" id="hidden" name="_method" value="DELETE">

@@ -1,6 +1,10 @@
-<h1>Here are your logs!</h1>
-<h2><a href="/logs/new">Create New Log</a></h2>
+<div class="container">
 
-<% @logs.each do |log| %>
-    <h3><a href="/logs/<%= log.id %>"><%= "Date: " + log.date + " " + "Location: " + log.location  %></a></h3>
-<% end %>
+    <h1 align="center">Here are your logs</h1>
+
+    <button class="create-btn btn btn-primary btn-medium text-center">Create New Log Entry</button>
+
+    <% @logs.each do |log| %>
+        <h3><a href="/logs/<%= log.id %>"><%= "Date: " + log.date + " " + "Location: " + log.location  %></a></h3>
+    <% end %>
+</div>
