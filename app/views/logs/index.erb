@@ -1,10 +1,11 @@
-<div class="container">
-
-    <h1 align="center">Here are your logs</h1>
-
-    <button class="create-btn btn btn-primary btn-medium text-center">Create New Log Entry</button>
-
-    <% @logs.each do |log| %>
-        <h3><a href="/logs/<%= log.id %>"><%= "Date: " + log.date + " " + "Location: " + log.location  %></a></h3>
-    <% end %>
-</div>
+    <div class="log-group">
+        <h1 class="text-center">Here are your logs</h1>
+        <div class="col-md-12 text-center">
+            <button class="create-btn btn btn-primary btn-medium">Create New Log Entry</button>
+        </div>
+        <div class="log-loop">
+            <% @logs.each do |log| %>
+                <h3 class="text-center"><a href="/logs/<%= log.id %>"><%= "Date: " + log.date + " " + "Location: " + log.location  %></a></h3>
+            <% end %>
+        </div>
+    </div>

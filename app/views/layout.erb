@@ -10,23 +10,50 @@
     <title>FishingLog</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-  <header class="hero">
 
-  </header>
-    <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Fishing Logs</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/logs">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <% if logged_in? %>
+            <%# <h1 class="display-4 jumbo-text">Here are your logs</h1> %>
+          <% end %>
+        </div>
+    </div>
 
         <%= yield %>
 
-      <footer class="branding">
-        <% if session[:user_id] %>
-          <button class="logout-btn btn btn-large btn-primary" onclick="location.href = '/logout'">Logout</button>
-        <% end %>
-      </footer>
+
+  </div>
+      <% if session[:user_id] %>
+        <footer class="page-footer">
+          <div class="container-fluid text-center text-md">
+            <div class="row">
+              <div class="col-md-12">
+                  <button class="logout-btn btn btn-large btn-danger" onclick="location.href = '/logout'">Logout</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      <% end %>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

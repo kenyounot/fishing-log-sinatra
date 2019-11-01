@@ -2,7 +2,6 @@ class LogsController < ApplicationController
     get '/logs' do
         if logged_in?
             @logs = User.find_by_id(session[:user_id]).logs
-            
             erb :"/logs/index"
         else
             redirect '/login'

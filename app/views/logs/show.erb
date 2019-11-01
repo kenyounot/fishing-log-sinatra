@@ -1,18 +1,20 @@
-<h1>Here's your log from <%= @log.date %></h1>
+<div class="show-log text-center">
+    <h1>Here's your log from <%= @log.date %></h1>
 
-<h3>Location: <%= @log.location %></h3>
-<h3>Wind Direction: <%= @log.wind_direction %></h3>
-<h3>Wind Speed: <%= @log.wind_speed %>mph</h3>
-<h3>Moon Phase: <%= @log.moon_phase %></h3>
-<h3>Tide Phase: <%= @log.tide_phase %></h3>
-<h3>Catch Species: <%= @log.catch_species %></h3>
-<h3>Catch Length: <%= @log.catch_length %>"</h3>
-<h3>Catch Weight: <%= @log.catch_weight %>lbs</h3>
-<h3>Comment: <%= @log.comment %></h3>
+    <h3>Location: <%= @log.location %></h3>
+    <h3>Wind Direction: <%= @log.wind_direction %></h3>
+    <h3>Wind Speed: <%= @log.wind_speed %>mph</h3>
+    <h3>Moon Phase: <%= @log.moon_phase %></h3>
+    <h3>Tide Phase: <%= @log.tide_phase %></h3>
+    <h3>Catch Species: <%= @log.catch_species %></h3>
+    <h3>Catch Length: <%= @log.catch_length %>"</h3>
+    <h3>Catch Weight: <%= @log.catch_weight %>lbs</h3>
+    <h3>Comment: <%= @log.comment %></h3>
 
-<button type="button" onclick="location.href = '/logs/<%= @log.id %>/edit';">Edit</button>
+    <button class="edit-btn btn btn-md btn-primary" type="button" onclick="location.href = '/logs/<%= @log.id %>/edit';">Edit</button>
 
-<form method="POST" action="/logs/<%= @log.id %>">
-    <input type="hidden" id="hidden" name="_method" value="DELETE">
-    <button type="submit">Delete Log</button>
-</form>
+    <form method="POST" action="/logs/<%= @log.id %>">
+        <input type="hidden" id="hidden" name="_method" value="DELETE">
+        <button class="btn btn-md btn-secondary" type="submit">Delete Log</button>
+    </form>
+</div>
